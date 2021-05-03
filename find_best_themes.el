@@ -2,7 +2,7 @@
 (defun try-theme (theme) 
   "function to try each theme"
   (if (eq (type-of theme) 'string) 
-      (try-themes (intern-soft theme)) 
+      (try-theme (intern-soft theme)) 
     (progn (let ((theme-name (symbol-name theme))) 
              (disable-theme (car custom-enabled-themes)) 
              (load-theme theme t) 
